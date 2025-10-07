@@ -1,0 +1,14 @@
+:root { --bg:#0b0d12; --panel:#0f1219; --text:#e6e6ea; --muted:#8b8fa3; --line:#161a22; }
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Helvetica,Arial,sans-serif}
+header{position:sticky;top:0;background:#0b0d12cc;backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:10px 16px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:800;background:linear-gradient(90deg,#ff34c7,#6df1ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+main{max-width:1200px;margin:0 auto;padding:16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+.card{position:relative;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--panel)}
+.card img{width:100%;display:block}
+.badge{position:absolute;left:8px;bottom:8px;background:#0b0d12cc;border:1px solid #2a3140;color:#cbd5e1;padding:4px 8px;border-radius:999px;font-size:12px}
+.controls{display:flex;gap:8px;flex-wrap:wrap}
+button,a.btn{appearance:none;border:1px solid #2a3140;background:#0f1219;color:#e6e6ea;border-radius:10px;padding:10px 14px;cursor:pointer}
+input{background:#0f1219;color:#e6e6ea;border:1px solid #2a3140;border-radius:8px;padding:10px}
+footer{padding:24px 16px;text-align:center;color:var(--muted);border-top:1px solid var(--line)}
