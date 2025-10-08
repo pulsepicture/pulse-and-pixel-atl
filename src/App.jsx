@@ -282,3 +282,36 @@ import Footer from './components/Footer';
 
 // …dans le JSX :
 <Footer />
+// src/App.jsx
+import { Routes, Route, NavLink } from 'react-router-dom'
+
+function Home() {
+  return <div style={{padding:'1rem'}}>Welcome to <b>Pulse & Pixel ATL</b> — Make the night move.</div>
+}
+
+function ClientLinks() {
+  return <div style={{padding:'1rem'}}>Client Links — generate & share galleries.</div>
+}
+
+function Events() {
+  return <div style={{padding:'1rem'}}>Upcoming Events & Promotions</div>
+}
+
+export default function App() {
+  return (
+    <>
+      <header style={{display:'flex',gap:'1rem',padding:'12px 16px',borderBottom:'1px solid #333'}}>
+        <b>Pulse & Pixel ATL</b>
+        <NavLink to="/" end>Home</NavLink>
+        <NavLink to="/client-links">Client links</NavLink>
+        <NavLink to="/events">Events</NavLink>
+      </header>
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/client-links" element={<ClientLinks />} />
+        <Route path="/events" element={<Events />} />
+      </Routes>
+    </>
+  )
+}
