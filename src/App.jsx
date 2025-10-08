@@ -278,3 +278,7 @@ function ClientView({link,events}){
     </>
   );
 }
+import Footer from './components/Footer';
+
+// …dans le JSX :
+<Footer />
